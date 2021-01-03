@@ -182,8 +182,8 @@ function Navbar() {
                 auth ? (
                   <small style={{ fontWeight: "bold" }}>Logout</small>
                 ) : (
-                  <Link href="/login_register">
-                    <small style={{ fontWeight: "bold" }}>Sign Out</small>
+                  <Link href="/signin">
+                    <small style={{ fontWeight: "bold" }}>Sign in</small>
                   </Link>
                 )
               }
