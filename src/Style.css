@@ -60,4 +60,19 @@
   border-radius: 50%;
 }
 
-
+.navBar__leftMenuIcon {
+  display: none;
+}
+/* responsive NavBar styles --> */
+@media only screen and (max-width: 426px) {
+  /* For mobile phones: */
+  .navBar__leftItems,
+  .navBar__rightItem {
+    display: none;
+  }
+  .navBar__leftMenuIcon,
+  .navBar__rightUserAvatar {
+    display: block;
+  }
+  
+}
