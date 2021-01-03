@@ -1,15 +1,35 @@
-import { React, useState } from "react";
+import { React } from "react";
 import "./App.css";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignIn from "./SignIn";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
-      <section>
-        <Navbar />
-      </section>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <section name="navBar">
+              <NavBar />
+            </section>
+          </Route>
+
+          <Route exact path="/login_register">
+            <section>
+              <SignIn />
+            </section>
+          </Route>
+
+          <Route exact path="/">
+            <section>
+              <NavBar />
+            </section>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

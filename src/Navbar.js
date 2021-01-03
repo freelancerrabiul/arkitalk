@@ -22,6 +22,7 @@ import {
   ListItemIcon,
   ListItemText,
   withStyles,
+  Link,
 } from "@material-ui/core";
 
 function Navbar() {
@@ -181,7 +182,9 @@ function Navbar() {
                 auth ? (
                   <small style={{ fontWeight: "bold" }}>Logout</small>
                 ) : (
-                  <small style={{ fontWeight: "bold" }}>Log In</small>
+                  <Link href="/login_register">
+                    <small style={{ fontWeight: "bold" }}>Sign Out</small>
+                  </Link>
                 )
               }
             />
