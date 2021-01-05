@@ -1,138 +1,75 @@
 import { React, useState } from "react";
 import "./Style.css";
 import Logo from "./Logo.svg";
+import { Link } from "react-router-dom";
 
 // meterial ui Icons
 import SearchIcon from "@material-ui/icons/Search";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import PeopleRoundedIcon from "@material-ui/icons/PeopleRounded";
-import LocalMallRoundedIcon from "@material-ui/icons/LocalMallRounded";
-import ChatRoundedIcon from "@material-ui/icons/ChatRounded";
-import NotificationsActiveRoundedIcon from "@material-ui/icons/NotificationsActiveRounded";
+import ExploreRoundedIcon from "@material-ui/icons/ExploreRounded";
+import SmsRoundedIcon from "@material-ui/icons/SmsRounded";
+import RoomServiceRoundedIcon from "@material-ui/icons/RoomServiceRounded";
 import MenuIcon from "@material-ui/icons/Menu";
-import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 
 import {
-  FormControlLabel,
-  FormGroup,
-  IconButton,
-  Switch,
-  Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-  withStyles,
-  Link,
-} from "@material-ui/core";
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Dropdown,
+} from "reactstrap";
 
 function Navbar() {
-  const [auth, setAuth] = useState(true);
+  const [showProfile, setShowProfile] = useState(false);
 
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
-
-  const [menuList, setMenuList] = useState(null);
-  const StyledMenu = withStyles({
-    paper: {
-      border: "1px solid #d3d4d5",
-    },
-  })((props) => (
-    <Menu
-      elevation={0}
-      getContentAnchorEl={null}
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "center",
-      }}
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      {...props}
-    />
-  ));
-  const StyledMenuItem = withStyles((theme) => ({
-    root: {
-      "&:focus": {
-        backgroundColor: theme.palette.primary.main,
-
-        "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-          color: theme.palette.common.white,
-        },
-      },
-    },
-  }))(MenuItem);
+  const toggle = () => setShowProfile((prevState) => !prevState);
   return (
     <div className="navBar">
       <div className="navBar__left">
         <img src={Logo} alt="logo" />
 
         {/* onLy visible in small displays */}
-        <div className="navBar__leftMenuIcon">
-          <IconButton
-            onClick={(e) => {
-              setMenuList(e.currentTarget);
-            }}
-            edge="start"
-            color="primary"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <StyledMenu
-            id="simple-menu"
-            menuList={menuList}
-            keepMounted
-            open={Boolean(menuList)}
-            onClose={() => {
-              setMenuList(null);
-            }}
-          >
-            <StyledMenuItem>
-              <ListItemIcon>
-                <HomeRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </StyledMenuItem>
+        <div className="navBar__leftMenuResponsiveDiv">
+          <UncontrolledDropdown>
+            <DropdownToggle
+              className="navBar__leftMenuResponsiveDiv"
+              color="black"
+            >
+              <MenuIcon color="primary" />
+            </DropdownToggle>
+            <DropdownMenu>
+              <Link to="/feed">
+                <DropdownItem>Home</DropdownItem>
+              </Link>
 
-            <StyledMenuItem>
-              <ListItemIcon>
-                <SearchRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Search" />
-            </StyledMenuItem>
+              <Link to="/mynetwork">
+                <DropdownItem>My Network</DropdownItem>
+              </Link>
 
-            <StyledMenuItem>
-              <ListItemIcon>
-                <PeopleRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="People" />
-            </StyledMenuItem>
+              <Link to="/messaging">
+                <DropdownItem>Messaging</DropdownItem>
+                <DropdownItem divider />
+              </Link>
 
-            <StyledMenuItem>
-              <ListItemIcon>
-                <LocalMallRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Explore" />
-            </StyledMenuItem>
+              <Link to="/notification">
+                <DropdownItem>Notification</DropdownItem>
+              </Link>
 
-            <StyledMenuItem>
-              <ListItemIcon>
-                <ChatRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Chat" />
-            </StyledMenuItem>
+              <Link to="/explore">
+                <DropdownItem>Explore</DropdownItem>
+              </Link>
 
-            <StyledMenuItem>
-              <ListItemIcon>
-                <NotificationsActiveRoundedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary="Notification" />
-            </StyledMenuItem>
-          </StyledMenu>
+              <Link to="/login">
+                <DropdownItem>Login</DropdownItem>
+              </Link>
+
+              <DropdownItem>Log Out</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
         </div>
         {/* onLy visible in small displays */}
+
         <div className="navBar__leftItems">
           <SearchIcon />
           <input type="text" placeholder="Search" />
@@ -141,54 +78,54 @@ function Navbar() {
 
       <div className="navBar__right">
         <div className="navBar__rightItem">
-          <HomeRoundedIcon />
+          <Link to="/feed">
+            <HomeRoundedIcon />
+          </Link>
         </div>
 
         <div className="navBar__rightItem">
-          <PeopleRoundedIcon />
+          <Link to="/mynetwork">
+            <PeopleRoundedIcon />
+          </Link>
         </div>
 
         <div className="navBar__rightItem">
-          <LocalMallRoundedIcon />
+          <Link to="/explore">
+            <ExploreRoundedIcon />
+          </Link>
         </div>
 
         <div className="navBar__rightItem">
-          <ChatRoundedIcon />
+          <Link to="/messaging">
+            <SmsRoundedIcon />
+          </Link>
         </div>
         <div className="navBar__rightItem">
-          <NotificationsActiveRoundedIcon />
+          <Link to="/notification">
+            <RoomServiceRoundedIcon />
+          </Link>
         </div>
-        {auth && (
-          <div className="navBar__rightUserAvatar">
-            <img
-              src="https://tbsnews.net/sites/default/files/styles/big_3/public/images/2020/04/18/markruffalo.jpg?itok=kIhgmTrr"
-              alt=""
-            />
-          </div>
-        )}
         <div>
-          <FormGroup>
-            <FormControlLabel
-              labelPlacement="start"
-              control={
-                <Switch
-                  size="small"
-                  checked={auth}
-                  onChange={handleChange}
-                  aria-label="login switch"
+          <Dropdown isOpen={showProfile} toggle={toggle}>
+            <DropdownToggle
+              tag="span"
+              data-toggle="dropdown"
+              aria-expanded={showProfile}
+            >
+              <div className="navBar__rightUserAvatar">
+                <img
+                  src="https://tbsnews.net/sites/default/files/styles/big_3/public/images/2020/04/18/markruffalo.jpg?itok=kIhgmTrr"
+                  alt=""
                 />
-              }
-              label={
-                auth ? (
-                  <small style={{ fontWeight: "bold" }}>Logout</small>
-                ) : (
-                  <Link href="/signin">
-                    <small style={{ fontWeight: "bold" }}>Sign in</small>
-                  </Link>
-                )
-              }
-            />
-          </FormGroup>
+              </div>
+            </DropdownToggle>
+            <DropdownMenu  style={{marginTop:"7vh", marginLeft:"1vw",}}>
+              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
       </div>
     </div>

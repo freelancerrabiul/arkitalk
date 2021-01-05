@@ -1,7 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
+body > button, input[type="button"], input[type="submit"] { 
+  outline-style: none !important;
+} 
+*:focus { 
+  outline: 0 !important;
+  box-shadow:
+    0 0 0 .2rem #fff,
+    0 0 0 .35rem #069 !important;
+}
+
+/**
+ * Remove focus styles for non-keyboard :focus.
+ */
+*:focus:not(.focus-visible) {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

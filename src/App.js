@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div className="app">
       <Router>
+        <NavBar />
         <Switch>
           <Route exact path="/signin">
             <section>
@@ -21,15 +22,6 @@ const App = () => {
               <Login />
             </section>
           </Route>
-
-          <Route exact path="/">
-            <section>
-              <NavBar />
-            </section>
-          </Route>
-
-
-          
         </Switch>
       </Router>
     </div>

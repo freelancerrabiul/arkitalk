@@ -39,12 +39,20 @@
   margin-top: auto;
   margin-bottom: auto;
 }
-.navBar__rightItem {
-  cursor: pointer;
+
+.navBar a {
   color: grey !important;
+  text-decoration: none !important;
+  outline-style: none !important;
 }
-.navBar__rightItem:hover {
+.navBar a:hover {
   color: black !important;
+  text-decoration: none !important;
+  outline-style: none !important;
+}
+.navBar a:active {
+  text-decoration: none !important;
+  outline-style: none !important;
 }
 
 .navBar__rightUserAvatar {
@@ -60,9 +68,10 @@
   border-radius: 50%;
 }
 
-.navBar__leftMenuIcon {
+.navBar__leftMenuResponsiveDiv {
   display: none;
 }
+
 /* responsive NavBar styles --> */
 @media only screen and (max-width: 426px) {
   /* For mobile phones: */
@@ -70,13 +79,13 @@
   .navBar__rightItem {
     display: none;
   }
-  .navBar__leftMenuIcon,
+  .navBar__leftMenuResponsiveDiv,
   .navBar__rightUserAvatar {
     display: block;
   }
 }
 
-/*         -----------      loginRegister    ------------------              */
+/*         -----------      SignIn    ------------------              */
 
 .signIn {
   margin-top: 5vh;
@@ -99,3 +108,25 @@
   margin-right: 2vw;
 }
 
+/*         -----------      Login    ------------------              */
+
+.login {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__logo {
+  margin-top: 1vh;
+  background-color: #f40057 !important;
+}
+.login__form {
+  width: 100%;
+  margin-top: 1vh;
+}
+
+.login__submitButton {
+  margin-top: 3vh;
+  margin-right: 2vw;
+}
