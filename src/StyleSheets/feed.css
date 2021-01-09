@@ -1,0 +1,152 @@
+.feed {
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  justify-content: space-between;
+  text-align: center;
+  margin: 1vw;
+}
+.feed__left {
+  flex: 0.2;
+  /* border: 1px solid red; */
+  margin: 1vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.MuiCard-root {
+  margin-bottom: 1.1vh;
+}
+
+.feed__leftCardMedia  /* feed__leftCardProfile */ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 345px !important;
+}
+
+.MuiAvatar-root {
+  height: 72px !important;
+  width: 72px !important;
+  object-fit: contain !important;
+  margin: -38px 0px 12px !important;
+}
+.feed__leftCardTitle > .MuiTypography-root {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.feed__leftCardDescription > .MuiTypography-root {
+  font-size: 12px !important;
+}
+.feed__leftCardDetail {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.feed__leftCardDetail:hover {
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+.feed__leftCardDetail__headLine {
+  font-size: 12px;
+  font-weight: bold;
+  color: #888686;
+}
+
+.feed__leftCardDetail__numbers {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2b7cce;
+}
+
+.MuiCardActionArea-root:hover  /* meterial ui action area */ {
+  background-color: #ebebeb;
+}
+.feed__leftCardDetail__myItem {
+  text-align: left;
+  justify-content: center;
+  padding-left: 1vw;
+  padding-top: 1.5vh;
+}
+.feed__leftCardDetail__myItem > p {
+  color: #424242;
+  font-weight: 650;
+  font-size: 12px;
+}
+.feed__leftCardDetail__myItemObject {
+  padding-left: 5px;
+}
+
+.feed__leftCommunityCard__recentActivity,
+.feed__leftCommunityCard__groupsActivity,
+.feed__leftCommunityCard__hashtags {
+  justify-content: left;
+  text-align: left;
+  padding-left: 1vw;
+  padding-top: 1.5vh;
+}
+.feed__leftCommunityCard__recentActivity > h2 {
+  font-size: 12px;
+}
+.feed__leftCommunityCard__recentActivity > ul > li > span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #616161;
+}
+.feed__leftCommunityCard__groupsActivity > h2 {
+  font-size: 12px;
+  color: #2b7cce;
+}
+.feed__leftCommunityCard__groupsActivity > h2:hover {
+  text-decoration: underline;
+}
+.feed__leftCommunityCard__groupsActivity > ul > li > span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #616161;
+}
+.feed__center {
+  flex: 0.5;
+  border: 1px solid blue;
+  margin: 1vw;
+}
+
+.feed__right {
+  flex: 0.3;
+  border: 1px solid black;
+  margin: 1vw;
+}
+
+.feed__leftCommunityCard__events {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 1vw;
+}
+.feed__leftCommunityCard__eventsHeadLine > h6 {
+  font-size: 12px;
+  color: #2b7cce;
+}
+
+.feed__leftCommunityCard__eventsHeadLine {
+  margin-bottom: 0.1vw;
+}
+.feed__leftCommunityCard__eventsHeadLine > h6:hover {
+  text-decoration: underline;
+}
+.feed__leftCommunityCard__hashtags > h2 {
+  font-size: 12px;
+  color: #2b7cce;
+}
+.feed__leftCommunityCard__hashtags > h2:hover {
+  text-decoration: underline;
+}
+
+.feed__leftCommunityCard__hashtags > ul > li > span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #616161;
+}

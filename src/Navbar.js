@@ -1,7 +1,7 @@
 import { React, useState } from "react";
-import "./Style.css";
 import Logo from "./Logo.svg";
 import { Link } from "react-router-dom";
+import "./StyleSheets/NavBar.css";
 
 // meterial ui Icons
 import SearchIcon from "@material-ui/icons/Search";
@@ -9,9 +9,11 @@ import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import PeopleRoundedIcon from "@material-ui/icons/PeopleRounded";
 import ExploreRoundedIcon from "@material-ui/icons/ExploreRounded";
 import SmsRoundedIcon from "@material-ui/icons/SmsRounded";
-import RoomServiceRoundedIcon from "@material-ui/icons/RoomServiceRounded";
+import NotificationsRoundedIcon from '@material-ui/icons/NotificationsRounded';
 import MenuIcon from "@material-ui/icons/Menu";
+import { Badge } from "@material-ui/core";
 
+// reactsrap
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -102,7 +104,12 @@ function Navbar() {
         </div>
         <div className="navBar__rightItem">
           <Link to="/notification">
-            <RoomServiceRoundedIcon />
+            <Badge
+              badgeContent={4}
+              color="error"
+            >
+              <NotificationsRoundedIcon />
+            </Badge>
           </Link>
         </div>
         <div>
@@ -119,11 +126,13 @@ function Navbar() {
                 />
               </div>
             </DropdownToggle>
-            <DropdownMenu  style={{marginTop:"7vh", marginLeft:"1vw",}}>
-              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
-              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
-              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
-              <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+            <DropdownMenu className="dropDownMenuDiv" right>
+              <div style={{ marginTop: "2vh" }}>
+                <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+                <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+                <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+                <DropdownItem onClick={toggle}> dropdown item</DropdownItem>
+              </div>
             </DropdownMenu>
           </Dropdown>
         </div>
