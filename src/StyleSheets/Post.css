@@ -1,0 +1,60 @@
+.post__modalDialogOpenSwitch {
+  padding: 1vh;
+}
+.modal {
+  overflow: hidden !important;
+}
+.modal-body {
+  padding: 0 !important;
+}
+.post__modalDialogOpenSwitch > button {
+  outline-style: none;
+  width: 97%;
+  padding: 1.3vh;
+  background-color: white;
+  border-radius: 7vw;
+  border: 1px solid lightgrey;
+  text-transform: capitalize;
+  text-align: left;
+  align-content: left;
+}
+
+.post__modalDialogOpenSwitch--input {
+  width: 100%;
+  outline-style: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+}
+.post__submit {
+  border: none;
+  outline-style: none;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0b65c4;
+  font-family: monospace;
+  transition:background-color 300ms;
+}
+.post__submit:active {
+  background-color: skyblue;
+
+}
+.post__optionalword > p {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 1vh 2vw;
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+  font-weight: 500;
+  border: 2px solid #fff;
+}
+.post__optionalword > p:hover {
+  border: 2px solid rgb(105, 103, 103);
+  background-color: Gainsboro;
+}

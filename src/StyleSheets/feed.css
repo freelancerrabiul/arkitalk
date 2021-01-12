@@ -1,6 +1,5 @@
 .feed {
   display: flex;
-  align-items: center;
   border: 1px solid green;
   justify-content: space-between;
   text-align: center;
@@ -8,14 +7,23 @@
 }
 .feed__left {
   flex: 0.2;
-  /* border: 1px solid red; */
   margin: 1vw;
   text-align: center;
-  justify-content: center;
+}
+.feed__center {
+  flex: 0.5;
+  /* border: 1px solid blue; */
+  margin: 1vw;
+}
+
+.feed__right {
+  flex: 0.3;
+  border: 1px solid black;
+  margin: 1vw;
 }
 
 .MuiCard-root {
-  margin-bottom: 1.1vh;
+  margin-top: 1.1vh;
 }
 
 .feed__leftCardMedia  /* feed__leftCardProfile */ {
@@ -28,9 +36,9 @@
 .MuiAvatar-root {
   height: 72px !important;
   width: 72px !important;
-  object-fit: contain !important;
-  margin: -38px 0px 12px !important;
+  margin: -30px 56px 12px !important;
 }
+
 .feed__leftCardTitle > .MuiTypography-root {
   font-weight: bold;
   text-transform: capitalize;
@@ -106,17 +114,6 @@
   font-weight: bold;
   color: #616161;
 }
-.feed__center {
-  flex: 0.5;
-  border: 1px solid blue;
-  margin: 1vw;
-}
-
-.feed__right {
-  flex: 0.3;
-  border: 1px solid black;
-  margin: 1vw;
-}
 
 .feed__leftCommunityCard__events {
   display: flex;
@@ -137,16 +134,80 @@
 .feed__leftCommunityCard__eventsHeadLine > h6:hover {
   text-decoration: underline;
 }
-.feed__leftCommunityCard__hashtags > h2 {
+.feed__leftCommunityCard__hashtags__headLines {
+  display: flex;
+  justify-content: space-between;
+}
+.feed__leftCommunityCard__hashtags__headLines > div > span {
   font-size: 12px;
   color: #2b7cce;
 }
-.feed__leftCommunityCard__hashtags > h2:hover {
+#addIcon {
+  opacity: 0;
+}
+
+.feed__leftCommunityCard__hashtags__headLines:hover > #addIcon {
+  opacity: 1;
+}
+.feed__leftCommunityCard__hashtags__headLines > div > span:hover {
   text-decoration: underline;
+}
+.feed__leftCommunityCard__hashtags__bottomLine {
+  border-top: 1px solid lightgrey;
+}
+.feed__leftCommunityCard__hashtags__bottomLine:hover {
+  background-color: #ebebeb;
+}
+.feed__leftCommunityCard__hashtags__bottomLine > ul li > span {
+  font-size: 12px;
+  color: #616161;
+  font-weight: bold;
+}
+ul > li:hover {
+  background-color: #ebebeb;
+  color: #424242;
 }
 
 .feed__leftCommunityCard__hashtags > ul > li > span {
   font-size: 12px;
   font-weight: bold;
   color: #616161;
+}
+.feed__center__postBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 1vw;
+  padding: 1vh;
+  background-color: #fff;
+  border: 1px solid lightgrey;
+}
+
+
+.feed__center__postBox__options {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1vh;
+  text-align: center;
+  align-items: center;
+}
+.feed__center__postBox__options > div > .MuiButton-root {
+  text-transform: capitalize;
+}
+.feed__postListOrderByTrigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1vh;
+}
+/* paddingBottom: "3px", paddingLeft: "1vw"  */
+.feed__postListOrderByTrigger > small {
+  padding-bottom: 3px;
+  padding-left: 1vw;
+}
+
+
+.feed__postListOrderByTrigger > small > b:hover {
+  cursor: pointer;
 }

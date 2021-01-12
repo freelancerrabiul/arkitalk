@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import "./StyleSheets/feed.css";
 import {
   Card,
@@ -7,14 +7,22 @@ import {
   Avatar,
   CardActionArea,
   IconButton,
+  Button,
 } from "@material-ui/core";
+
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import PeopleOutlineRoundedIcon from "@material-ui/icons/PeopleOutlineRounded";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import AddIcon from "@material-ui/icons/Add";
 import HorizontalSplitIcon from "@material-ui/icons/HorizontalSplit";
+import YouTubeIcon from "@material-ui/icons/YouTube";
+import PhotoSizeSelectActualOutlinedIcon from "@material-ui/icons/PhotoSizeSelectActualOutlined";
+import AssignmentTurnedInOutlinedIcon from "@material-ui/icons/AssignmentTurnedInOutlined";
+import DeveloperBoardOutlinedIcon from "@material-ui/icons/DeveloperBoardOutlined";
+import ArrowDropDownSharpIcon from "@material-ui/icons/ArrowDropDownSharp";
+import Post from "./Post";
 
-const Feed = () => {
+function Feed() {
   return (
     <div className="feed">
       <div className="feed__left">
@@ -39,7 +47,7 @@ const Feed = () => {
 
           <div className="feed__leftCardTitle">
             <Typography gutterBottom component="p">
-              Md. Rabiul
+              Md.Rabiul
             </Typography>
             <div>
               <div className="feed__leftCardDescription">
@@ -117,24 +125,20 @@ const Feed = () => {
                 <h6>Events</h6>
               </div>
               <div style={{ marginBottom: "1vw" }}>
-                <IconButton small="true">
+                <IconButton size="small">
                   <AddIcon fontSize="small" color="action" />
                 </IconButton>
               </div>
             </div>
             <div className="feed__leftCommunityCard__hashtags">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  textAlign: "left",
-                }}
-              >
+              <div className="feed__leftCommunityCard__hashtags__headLines">
                 <div>
-                  <h2 style={{fontSize:"12px"}}>Followed hashtags</h2>
+                  <span>Followed hashtags</span>
                 </div>
-                <div>
-                  <AddIcon fontSize="small" color="action" />
+                <div id="addIcon">
+                  <IconButton size="small">
+                    <AddIcon fontSize="inherit" color="action" />
+                  </IconButton>
                 </div>
               </div>
               <ul>
@@ -151,27 +155,102 @@ const Feed = () => {
                 </li>
               </ul>
             </div>
+            <CardActionArea
+              style={{ paddingBottom: "1vh", borderTop: "1px solid lightgrey" }}
+            >
+              <small
+                style={{
+                  color: "#363636",
+                  fontSize: "12px",
+                  fontWeight: "600",
+                }}
+              >
+                iscover More
+              </small>
+            </CardActionArea>
           </div>
         </Card>
       </div>
 
       <div className="feed__center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga
-        exercitationem sequi blanditiis perferendis, eaque iusto quos illum
-        porro assumenda, aut nobis. Adipisci vitae incidunt quos blanditiis,
-        vero dicta corrupti.
+        <div className="feed__center__postBox">
+          <div>
+            <Post />
+          </div>
+          <div className="feed__center__postBox__options">
+            <div>
+              <Button
+                variant="text"
+                color="default"
+                size="small"
+                startIcon={
+                  <PhotoSizeSelectActualOutlinedIcon
+                    htmlColor="#2196f3"
+                    fontSize="small"
+                  />
+                }
+              >
+                Photo
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="text"
+                color="default"
+                startIcon={<YouTubeIcon htmlColor="#e7a33e" fontSize="small" />}
+              >
+                Video
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="text"
+                color="default"
+                startIcon={
+                  <AssignmentTurnedInOutlinedIcon
+                    htmlColor="#cfa2cd"
+                    fontSize="small"
+                  />
+                }
+              >
+                Goal
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="text"
+                color="default"
+                startIcon={
+                  <DeveloperBoardOutlinedIcon
+                    htmlColor="#f6987e"
+                    fontSize="small"
+                  />
+                }
+              >
+                Write article
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="feed__postListOrderByTrigger">
+          <hr style={{ width: "75%" }} />
+          <small>
+            ShortBy<b>: Top</b>
+            <ArrowDropDownSharpIcon fontSize="small" htmlColor="Black" />
+          </small>
+        </div>
       </div>
 
       <div className="feed__right">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga
-          exercitationem sequi blanditiis perferendis, eaque iusto quos illum
-          porro assumenda, aut nobis. Adipisci vitae incidunt quos blanditiis,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.Vero fuga
+          xercitationem sequi blanditiis perferendis, eaque iusto quos illum
+          orro assumenda, aut nobis.Adipisci vitae incidunt quos blanditiis,
           vero dicta corrupti.
         </p>
       </div>
     </div>
   );
-};
+}
 
 export default Feed;
