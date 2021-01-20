@@ -6,9 +6,8 @@ import { Button, Chip, IconButton } from "@material-ui/core";
 import PublicIcon from "@material-ui/icons/Public";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import AddSharpIcon from "@material-ui/icons/AddSharp";
-
-import PanoramaOutlinedIcon from "@material-ui/icons/PanoramaOutlined";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import PanoramaOutlinedIcon from "@material-ui/icons/PanoramaOutlined";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 
@@ -122,7 +121,6 @@ function MakePost() {
                   style={{
                     display: "flex",
                     alignContent: "center",
-                    alignItems: "left",
                     textAlign: "center",
                   }}
                 >

@@ -5,5 +5,27 @@
 .my-anchor-css-class:hover {
   color: grey;
 }
+.posts__socialActionBar {
+  display: flex;
+  padding-bottom: inherit;
+}
+.posts__commentWritingDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  outline-style: none;
+  border: 2px solid rgb(224, 221, 221);
+  border-radius: 25px;
+  margin-bottom: 1vh;
+}
 
-.posts__socialActionBar > .Mui-Button
+.posts__commentWritingDiv:hover{
+  border: 2px solid grey;
+
+}
+.posts__likeCounter,
+.posts__disLikeCounter,
+.posts__commentCounter {
+  font-size: small;
+  font-weight: bold;
+}
