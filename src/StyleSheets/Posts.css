@@ -1,0 +1,9 @@
+.content-css > span {
+  font-size: 14px;
+  word-spacing: inherit !important;
+}
+.my-anchor-css-class:hover {
+  color: grey;
+}
+
+.posts__socialActionBar > .Mui-Button

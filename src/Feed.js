@@ -20,7 +20,9 @@ import PhotoSizeSelectActualOutlinedIcon from "@material-ui/icons/PhotoSizeSelec
 import AssignmentTurnedInOutlinedIcon from "@material-ui/icons/AssignmentTurnedInOutlined";
 import DeveloperBoardOutlinedIcon from "@material-ui/icons/DeveloperBoardOutlined";
 import ArrowDropDownSharpIcon from "@material-ui/icons/ArrowDropDownSharp";
-import Post from "./Post";
+import MakePost from "./MakePost";
+import Presentation from "./Presentation";
+import Posts from "./Posts";
 
 function Feed() {
   return (
@@ -165,7 +167,7 @@ function Feed() {
                   fontWeight: "600",
                 }}
               >
-                iscover More
+                Discover More
               </small>
             </CardActionArea>
           </div>
@@ -175,7 +177,7 @@ function Feed() {
       <div className="feed__center">
         <div className="feed__center__postBox">
           <div>
-            <Post />
+            <MakePost />
           </div>
           <div className="feed__center__postBox__options">
             <div>
@@ -239,15 +241,12 @@ function Feed() {
             <ArrowDropDownSharpIcon fontSize="small" htmlColor="Black" />
           </small>
         </div>
+
+        <Posts />
       </div>
 
       <div className="feed__right">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Vero fuga
-          xercitationem sequi blanditiis perferendis, eaque iusto quos illum
-          orro assumenda, aut nobis.Adipisci vitae incidunt quos blanditiis,
-          vero dicta corrupti.
-        </p>
+        <Presentation />
       </div>
     </div>
   );

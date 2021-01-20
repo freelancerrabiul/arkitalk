@@ -55,6 +55,7 @@
 .navBar a:active {
   text-decoration: none !important;
   outline-style: none !important;
+  
 }
 
 .navBar__rightUserAvatar {

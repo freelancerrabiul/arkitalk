@@ -4,8 +4,12 @@
 .modal {
   overflow: hidden !important;
 }
+.modal-content {
+  border-radius: 0px !important;
+}
 .modal-body {
   padding: 0 !important;
+ 
 }
 .post__modalDialogOpenSwitch > button {
   outline-style: none;
@@ -39,11 +43,10 @@
   color: #fff;
   background-color: #0b65c4;
   font-family: monospace;
-  transition:background-color 300ms;
+  transition: background-color 300ms;
 }
 .post__submit:active {
   background-color: skyblue;
-
 }
 .post__optionalword > p {
   background-color: #fff;

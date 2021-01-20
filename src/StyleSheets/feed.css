@@ -6,20 +6,19 @@
   margin: 1vw;
 }
 .feed__left {
-  flex: 0.2;
+  flex: 0.2 !important;
   margin: 1vw;
   text-align: center;
 }
 .feed__center {
-  flex: 0.5;
+  flex: 0.5 !important;
   /* border: 1px solid blue; */
   margin: 1vw;
 }
 
 .feed__right {
-  flex: 0.3;
-  border: 1px solid black;
-  margin: 1vw;
+  flex: 0.3 !important;
+  margin: 1vh 1vw;
 }
 
 .MuiCard-root {
@@ -183,7 +182,6 @@ ul > li:hover {
   border: 1px solid lightgrey;
 }
 
-
 .feed__center__postBox__options {
   text-transform: capitalize;
   display: flex;
@@ -206,7 +204,6 @@ ul > li:hover {
   padding-bottom: 3px;
   padding-left: 1vw;
 }
-
 
 .feed__postListOrderByTrigger > small > b:hover {
   cursor: pointer;

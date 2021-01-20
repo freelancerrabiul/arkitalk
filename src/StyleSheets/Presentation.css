@@ -1,0 +1,57 @@
+.presentation {
+  padding: 1vh 1vw;
+  background-color: #fff;
+  border-radius: 9px;
+  border: 1px solid lightgrey;
+}
+.presentation__title {
+  display: flex;
+  justify-content: space-between;
+}
+.presentation__list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 2vh;
+}
+.presentation__listItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1vw;
+}
+.presentation__listItemHighlight {
+  font-weight: bold;
+}
+
+.presentation__list .MuiButton-root {
+  padding: 0px !important;
+}
+.presentation__listItemHashtag {
+  text-transform: capitalize;
+  outline-style: "none";
+  border: none;
+  background-color: transparent;
+  padding-bottom: 1vh;
+  font-weight: bold;
+  font-size: small;
+  color: grey;
+
+}
+.presentation__listItemButton {
+    padding-left: 1vw;
+}
+.presentation__listItemButton > button {
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: #fff;
+  color: grey;
+  
+}
+.presentation__listItemButton > button:hover {
+    border: 1px solid rgb(105, 104, 104);
+    background-color: #ebebeb;
+}
