@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import ShowMoreText from "react-show-more-text";
 import "./StyleSheets/Posts.css";
 import { Button, IconButton } from "@material-ui/core";
@@ -12,7 +12,10 @@ function Posts() {
   const executeOnClick = (isExpanded) => {};
 
   return (
-    <div className="posts">
+    
+    <div className="posts" style={{
+      backgroundColor:"transparent"
+    }}>
       <div className="card text-left">
         <div className="card-header">
           <div className="d-flex">
@@ -60,7 +63,9 @@ function Posts() {
         <div className="card-body p-0">
           <img
             className="img-fluid"
-            src="https://media-exp1.licdn.com/dms/image/sync/C4E27AQEeH8uRSO_xkQ/articleshare-shrink_800/0/1611067041628?e=1611201600&v=beta&t=gIAX0rXzr4CbVjuds99IS1EcQiu0Na47UHRvDAtC-pw"
+            src="
+            https://material-ui.com/static/images/cards/contemplative-reptile.jpg
+            "
             alt="port"
           />
         </div>
@@ -130,14 +135,14 @@ function Posts() {
                     placeholder="Add a comment"
                   ></textarea>
                 </div>
-                <div>
-                  <IconButton>
-                    <SentimentSatisfiedIcon fontSize="small" />
-                  </IconButton>
-                  <IconButton>
-                    <PanoramaIcon fontSize="small" />
-                  </IconButton>
-                </div>
+
+                <IconButton>
+                  <SentimentSatisfiedIcon fontSize="small" />
+                </IconButton>
+
+                <IconButton>
+                  <PanoramaIcon fontSize="small" />
+                </IconButton>
               </div>
             </div>
             <div className="card card-body p-1 d-flex">
